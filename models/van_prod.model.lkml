@@ -10,8 +10,13 @@ datagroup: van_prod_default_datagroup {
 
 persist_with: van_prod_default_datagroup
 
-explore: applicationusagelogs {}
-
+explore: applicationusagelogs {
+  join: searchlogs {
+    type: left_outer
+    sql_on: ${applicationusagelogs.id}d} =${searchlogs.searchid} ;;
+    relationship: many_to_one
+}
+}
 explore: documentlogs {}
 
 explore: searchlogs {}

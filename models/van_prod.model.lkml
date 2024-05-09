@@ -19,4 +19,10 @@ explore: applicationusagelogs {
 }
 explore: documentlogs {}
 
-explore: searchlogs {}
+explore: searchlogs {
+  join: documentlogs {
+    type: left_outer
+    sql_on: ${searchlogs.searchid}=${documentlogs.searchid} ;;
+    relationship: many_to_one
+  }
+}

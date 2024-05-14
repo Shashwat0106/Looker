@@ -53,4 +53,7 @@ view: documentlogs {
     type: count
     drill_fields: [documentlogid, documentname, username]
   }
+  measure: average {
+    type: average
+  }
 }

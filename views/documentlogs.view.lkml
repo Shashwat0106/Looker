@@ -4,6 +4,7 @@ view: documentlogs {
 
   dimension: documentlogid {
     primary_key: yes
+    hidden: yes
     type: string
     sql: ${TABLE}."documentlogid" ;;
   }

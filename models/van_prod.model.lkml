@@ -13,14 +13,14 @@ persist_with: van_prod_default_datagroup
 explore: applicationusagelogs {
   join: searchlogs {
     type: left_outer
-    sql_on: ${applicationusagelogs.id}d} =${searchlogs.searchid} ;;
+    sql_on: ${applicationusagelogs.id} =${searchlogs.searchid} ;;
     relationship: many_to_one
 }
 }
-explore: documentlogs {}
+#explore: documentlogs {}
 
-explore: searchlogs {
-  join: documentlogs {
+explore: documentlogs {
+  join: searchlogs {
     type: left_outer
     sql_on: ${searchlogs.searchid}=${documentlogs.searchid} ;;
     relationship: many_to_one

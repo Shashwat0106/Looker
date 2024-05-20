@@ -11,6 +11,7 @@ view: searchlogs {
   }
   dimension: searchid {
     primary_key: yes
+    hidden: yes
     type: string
     sql: ${TABLE}."searchid" ;;
   }

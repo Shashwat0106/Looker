@@ -14,7 +14,7 @@ explore: applicationusagelogs {
   join: searchlogs {
     type: left_outer
     sql_on: ${applicationusagelogs.id} =${searchlogs.searchid} ;;
-    relationship: many_to_one
+    relationship: one_to_many
 }
 }
 explore: documentlogs {}
@@ -23,6 +23,6 @@ explore: searchlogs {
   join: documentlogs {
     type: left_outer
     sql_on: ${searchlogs.searchid}=${documentlogs.searchid} ;;
-    relationship: many_to_one
+    relationship: one_to_many
   }
 }

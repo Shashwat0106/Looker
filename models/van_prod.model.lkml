@@ -18,7 +18,7 @@ explore: applicationusagelogs {
 }
 }
 explore: documentlogs {}
-explore: sql_query_successfeedback{}
+
 
 explore: searchlogs {
   join: documentlogs {

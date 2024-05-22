@@ -18,7 +18,7 @@ explore: applicationusagelogs {
 }
 }
 explore: documentlogs {}
-
+explore: success {}
 
 explore: searchlogs {
   join: documentlogs {

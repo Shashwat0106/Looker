@@ -21,7 +21,7 @@ explore: documentlogs {}
 explore: success {}
 
 explore: searchlogs {
-  sql_always_where:${username}!='admin'  ;;
+  sql_always_where:${username}!='admin' and ${username}!='authoradmin'  ;;
   join: documentlogs {
     type: left_outer
     sql_on: ${searchlogs.searchid}=${documentlogs.searchid} ;;

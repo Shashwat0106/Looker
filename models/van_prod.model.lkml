@@ -11,6 +11,7 @@ datagroup: van_prod_default_datagroup {
 persist_with: van_prod_default_datagroup
 
 explore: applicationusagelogs {
+  sql_always_where:${username}!='admin' and ${username}!='authoradmin'  ;;
   join: searchlogs {
     type: left_outer
     sql_on: ${applicationusagelogs.id} =${searchlogs.searchid} ;;
